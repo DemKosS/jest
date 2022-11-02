@@ -13,5 +13,17 @@ describe("Books names test suit", () => {
       "Волшебник изумрудного города",
       "Гарри Поттер",
     ]);
- });
+  });
+
+  it("Equal Books names don`t should be sorted", () => {
+    expect(
+      sorting.sortByName([
+        "Микеланджило",
+        "Микеланджило",
+      ])
+    ).toEqual([
+        "Микеланджило",
+        "Микеланджило",
+    ]);
+  }); 
 });
